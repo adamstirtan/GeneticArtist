@@ -14,7 +14,13 @@
             <Image Name="ImageResult" Stretch="Fill" />
         </Border>
         <StackPanel Orientation="Vertical" Width="160">
-            <Button Name="ButtonOpen" Content="Open..." Margin="16" Click="ButtonOpen_Click" />
+            <Button Name="ButtonOpen" Content="Open..." Margin="16,16,16,16" Padding="8" Click="ButtonOpen_Click" />
+            <Label Margin="10,0">Population size</Label>
+            <TextBox Name="TextBoxPopulationSize" Margin="16,0,16,0" Padding="4">16</TextBox>
+            <Label Margin="10,0">Number of polygons</Label>
+            <TextBox Name="TextBoxChromosomes" Margin="16,0,16,0" Padding="4">50</TextBox>
+            <Button Name="ButtonStart" Content="Start" Margin="16,32,16,0" Padding="8" IsEnabled="False" Click="ButtonStart_Click"></Button>
+            <Button Name="ButtonCancel" Content="Cancel" Margin="16,8,16,16" Padding="8" IsEnabled="False"></Button>
         </StackPanel>
     </StackPanel>
 </Window>

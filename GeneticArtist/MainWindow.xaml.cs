@@ -5,6 +5,8 @@ using System.Windows.Media.Imaging;
 
 using Microsoft.Win32;
 
+using GeneticArtist.Genetic;
+
 namespace GeneticArtist
 {
     public partial class MainWindow : Window
@@ -46,7 +48,16 @@ namespace GeneticArtist
             if (dialog.ShowDialog() == true)
             {
                 ImageSource.Source = new BitmapImage(new Uri(dialog.FileName));
+                ButtonStart.IsEnabled = true;
             }
+        }
+
+        private void ButtonStart_Click(object sender, RoutedEventArgs e)
+        {
+            var populationSize = int.Parse(TextBoxPopulationSize.Text);
+            var chromosomeLength = int.Parse(TextBoxChromosomes.Text);
+
+            var geneticAlgorithm = new GeneticAlgorithm(populationSize, chromosomeLength);
         }
     }
 }

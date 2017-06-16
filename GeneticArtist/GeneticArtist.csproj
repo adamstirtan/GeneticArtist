@@ -96,5 +96,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeneticArtist.Genetic\GeneticArtist.Genetic.csproj">
+      <Project>{4c63b6e7-3b0d-4fdb-be86-77f145c297df}</Project>
+      <Name>GeneticArtist.Genetic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
